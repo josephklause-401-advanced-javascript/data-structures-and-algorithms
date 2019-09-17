@@ -1,15 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1568737652252" clover="3.2.0">
-  <project timestamp="1568737652253" name="All files">
-    <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1" elements="7" coveredelements="7" complexity="0" loc="6" ncloc="6" packages="1" files="1" classes="1"/>
-    <file name="array-reverse.js" path="/Users/joeklause/alchemy/career-track/code-challenges/data-structures-and-algorithms/challenges/arrayReverse/array-reverse.js">
+<coverage generated="1568740825068" clover="3.2.0">
+  <project timestamp="1568740825068" name="All files">
+    <metrics statements="15" coveredstatements="15" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2" elements="17" coveredelements="17" complexity="0" loc="15" ncloc="15" packages="2" files="2" classes="2"/>
+    <package name="arrayReverse">
       <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-      <line num="3" count="1" type="stmt"/>
-      <line num="4" count="1" type="stmt"/>
-      <line num="5" count="1" type="stmt"/>
-      <line num="6" count="5" type="stmt"/>
-      <line num="8" count="1" type="stmt"/>
-      <line num="11" count="1" type="stmt"/>
-    </file>
+      <file name="array-reverse.js" path="/Users/joeklause/alchemy/career-track/code-challenges/data-structures-and-algorithms/challenges/arrayReverse/array-reverse.js">
+        <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="5" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="arrayShift">
+      <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="array-shift.js" path="/Users/joeklause/alchemy/career-track/code-challenges/data-structures-and-algorithms/challenges/arrayShift/array-shift.js">
+        <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="5" count="4" type="stmt"/>
+        <line num="7" count="2" type="stmt"/>
+        <line num="9" count="2" type="stmt"/>
+        <line num="10" count="3" type="stmt"/>
+        <line num="12" count="2" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+      </file>
+    </package>
   </project>
 </coverage>
