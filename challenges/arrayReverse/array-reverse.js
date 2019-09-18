@@ -1,4 +1,4 @@
-/* eslint-disable no-unused-vars */
+
 function reverseArray(array){
   const length = array.length - 1;
   const resultArray = [];
