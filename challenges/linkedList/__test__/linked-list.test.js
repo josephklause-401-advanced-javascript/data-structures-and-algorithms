@@ -1,12 +1,54 @@
-const LinkedList = require('../linked-list');
+const { Node, LinkedList } = require('../linked-list');
 
-describe('liked list', () => {
+describe('linked list', () => {
 
   it('can successfully instantiate an empty linked list', () => {
-    //arrange
     const linkedList = new LinkedList;
-    console.log(linkedList);
-    //act
-    //assert
+    expect(linkedList.head).toBe(null);
   });
+
+  it('can properly insert into the linked list', () => {
+    const linkedList = new LinkedList;
+    linkedList.insert('happy');
+    expect(linkedList.head.value).toBe('happy');
+  });
+
+  it('the head property will properly point to the first node in the linked list', () => {
+    const linkedList = new LinkedList;
+    let node = new Node('happy');
+    linkedList.insert('happy');
+    expect(linkedList.head).toEqual(node);
+  });
+
+  it('can properly insert multiple values into list', () => {
+    const linkedList = new LinkedList;
+    let node = new Node('happy');
+    linkedList.insert('happy');
+    linkedList.insert('sad');
+    expect(linkedList.head.next).toEqual(node);
+  });
+
+  it('returns true when searching for value in linked list that exists', () => {
+    const linkedList = new LinkedList;
+    linkedList.insert('happy');
+    linkedList.insert('sad');
+    expect(linkedList.includes('sad')).toBe(true);
+  });
+  
+  it('returns false when searching for value in linked list that doesn\'t exist', () => {
+    const linkedList = new LinkedList;
+    linkedList.insert('happy');
+    linkedList.insert('sad');
+    expect(linkedList.includes('angry')).toBe(false);
+  });
+
+  it('Can properly return a collection of all the values that exist in the linked list', () => {
+    const linkedList = new LinkedList;
+    linkedList.insert('happy');
+    linkedList.insert('sad');
+    linkedList.insert('angry');
+    linkedList.insert('joyful');
+    expect(linkedList.toString()).toBe('joyful angry sad happy ');
+  });
+
 });
