@@ -6,3 +6,5 @@
 ### [Array Shift](challenges/arrayShift/array-shift.js)
 
 ### [Array Binary Search](challenges/arrayBinarySearch/array-binary-search.js)
+
+### [Linked List](challenges/arrayBinarySearch/array-binary-search.js)
