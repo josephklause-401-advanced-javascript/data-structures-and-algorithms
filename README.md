@@ -7,4 +7,4 @@
 
 ### [Array Binary Search](challenges/arrayBinarySearch/array-binary-search.js)
 
-### [Linked List](challenges/arrayBinarySearch/array-binary-search.js)
+### [Linked List](challenges/linkedList/linked-list.js)
