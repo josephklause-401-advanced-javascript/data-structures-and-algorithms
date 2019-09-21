@@ -9,13 +9,7 @@ Define a method called includes
 Define a method called toString
 
 ## Approach & Efficiency
-Find mid point of array.
-Loop through original array from  beginning to mid-point.
-Add elements of original array into new array up to the mid point.
-Put in the new element at mid point.
-Loop through original array from mid-point to end.
-Add the rest of the original elements to end of new array.
-Return Array.
+Create a Node Class
+Create a LinkedList class
 
 ## Solution
-![arrayShift Whiteboard](IMG_5254.jpg)
