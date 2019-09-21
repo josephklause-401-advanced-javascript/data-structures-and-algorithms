@@ -10,6 +10,19 @@ Define a method called toString
 
 ## Approach & Efficiency
 Create a Node Class
+with this.value equal to value passed in
+and this.next = null... the first and the last!
+
 Create a LinkedList class
+this.head = null
+
+write an insert that takes a value and will add a new Node instance to list.
+the next becomes null and the the head become the new node.
+
+includes takes a value as a parameter, traverse the list and look for the .value. if that equals the value passed in, return true!
+
+toString, traverse list and collect all the .values in a string.
+
 
 ## Solution
+![LinkedList Whiteboard](IMG_5264.jpg)
