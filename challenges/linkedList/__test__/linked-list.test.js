@@ -2,53 +2,47 @@ const { Node, LinkedList } = require('../linked-list');
 
 describe('linked list', () => {
 
-  it('can successfully instantiate an empty linked list', () => {
-    const linkedList = new LinkedList;
-    expect(linkedList.head).toBe(null);
-  });
 
-  it('can properly insert into the linked list', () => {
-    const linkedList = new LinkedList;
-    linkedList.insert('happy');
-    expect(linkedList.head.value).toBe('happy');
-  });
-
-  it('the head property will properly point to the first node in the linked list', () => {
-    const linkedList = new LinkedList;
-    let node = new Node('happy');
-    linkedList.insert('happy');
-    expect(linkedList.head).toEqual(node);
-  });
-
-  it('can properly insert multiple values into list', () => {
-    const linkedList = new LinkedList;
-    let node = new Node('happy');
-    linkedList.insert('happy');
-    linkedList.insert('sad');
-    expect(linkedList.head.next).toEqual(node);
-  });
-
-  it('returns true when searching for value in linked list that exists', () => {
-    const linkedList = new LinkedList;
-    linkedList.insert('happy');
-    linkedList.insert('sad');
-    expect(linkedList.includes('sad')).toBe(true);
-  });
-  
-  it('returns false when searching for value in linked list that doesn\'t exist', () => {
-    const linkedList = new LinkedList;
-    linkedList.insert('happy');
-    linkedList.insert('sad');
-    expect(linkedList.includes('angry')).toBe(false);
-  });
-
-  it('Can properly return a collection of all the values that exist in the linked list', () => {
+  it('can properly append node to end of list', () => {
     const linkedList = new LinkedList;
     linkedList.insert('happy');
     linkedList.insert('sad');
     linkedList.insert('angry');
+    linkedList.append('joyful');
+    expect(linkedList.toString()).toBe('angry sad happy joyful ');
+  });
+
+  it('can properly append multiple nodes to end of list', () => {
+    const linkedList = new LinkedList;
+    linkedList.insert('happy');
+    linkedList.insert('sad');
+    linkedList.append('angry');
+    linkedList.append('joyful');
+    expect(linkedList.toString()).toBe('sad happy angry joyful ');
+  });
+
+  it('if no list, it will start new list', () => {
+    const linkedList = new LinkedList;
+    linkedList.append('joyful');
+    expect(linkedList.toString()).toBe('joyful ');
+  });
+
+  it('Can successfully insert a node before a node located i the middle of a linked list', () => {
+    const linkedList = new LinkedList;
+    linkedList.insert('happy');
+    linkedList.insert('sad');
     linkedList.insert('joyful');
-    expect(linkedList.toString()).toBe('joyful angry sad happy ');
+    linkedList.insertBefore('sad', 'angry');
+    expect(linkedList.toString()).toBe('sad happy');
+  });
+
+  it('Can successfully insert a node before a node located i the middle of a linked list', () => {
+    const linkedList = new LinkedList;
+    linkedList.insert('happy');
+    linkedList.insert('sad');
+    linkedList.insert('joyful');
+    linkedList.insertAfter('sad', 'angry');
+    expect(linkedList.toString()).toBe('sad happy');
   });
 
   it('Can properly remove a node from the beginning of the list', () => {

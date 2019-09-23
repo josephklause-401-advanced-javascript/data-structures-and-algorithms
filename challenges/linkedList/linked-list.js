@@ -19,6 +19,27 @@ class LinkedList {
     return this.head;
   }
 
+  append(value) {
+    const newLastNode = new Node(value);
+    if(this.head === null) {
+      this.head = newLastNode;
+    } else {
+      let formerLastNode = this.head;
+      while(formerLastNode.next !== null) {
+        formerLastNode = formerLastNode.next;
+      }
+      formerLastNode.next = newLastNode;
+    }
+  }
+
+  insertBefore(value, newVal) {
+
+  }
+
+  insertAfter(value, newVal) {
+
+  }
+
   deletes(value) {
     if(this.head.value === value) {
       this.head = this.head.next;
