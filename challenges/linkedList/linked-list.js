@@ -32,12 +32,42 @@ class LinkedList {
     }
   }
 
-  insertBefore(value, newVal) {
 
+  insertBefore(value, newVal) {
+    const newNode = new Node(newVal);
+
+    let node = this.head;
+    if(node.value === value) {
+      this.insert(newVal);
+    }
+
+    while(node.next) {
+      if(node.next.value === value) {
+        newNode.next = node.next;
+        node.next = newNode;
+        node = newNode;
+      } 
+      node = node.next;
+    } 
   }
 
   insertAfter(value, newVal) {
+    const newNode = new Node(newVal);
 
+    let node = this.head;
+
+    while(node.next) {
+      if(node.value === value) {
+        newNode.next = node.next;
+        node.next = newNode;
+        node = newNode;
+      } 
+      node = node.next;
+    }
+        
+    if(node.value === value && node.next === null) {
+      this.append(newVal);
+    }
   }
 
   deletes(value) {

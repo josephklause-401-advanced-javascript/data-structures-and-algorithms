@@ -27,22 +27,40 @@ describe('linked list', () => {
     expect(linkedList.toString()).toBe('joyful ');
   });
 
-  it('Can successfully insert a node before a node located i the middle of a linked list', () => {
+  it('Can successfully insert a node before a node located in the middle of a linked list', () => {
     const linkedList = new LinkedList;
     linkedList.insert('happy');
     linkedList.insert('sad');
     linkedList.insert('joyful');
     linkedList.insertBefore('sad', 'angry');
-    expect(linkedList.toString()).toBe('sad happy');
+    expect(linkedList.toString()).toBe('joyful angry sad happy ');
   });
 
-  it('Can successfully insert a node before a node located i the middle of a linked list', () => {
+  it('Can successfully insert a node before the first node of a linked list', () => {
+    const linkedList = new LinkedList;
+    linkedList.insert('happy');
+    linkedList.insert('sad');
+    linkedList.insert('joyful');
+    linkedList.insertBefore('joyful', 'angry');
+    expect(linkedList.toString()).toBe('angry joyful sad happy ');
+  });
+
+  it('Can successfully insert a node after a node located in the middle of a linked list', () => {
     const linkedList = new LinkedList;
     linkedList.insert('happy');
     linkedList.insert('sad');
     linkedList.insert('joyful');
     linkedList.insertAfter('sad', 'angry');
-    expect(linkedList.toString()).toBe('sad happy');
+    expect(linkedList.toString()).toBe('joyful sad angry happy ');
+  });
+ 
+  it('Can successfully insert a node after the last node of a linked list', () => {
+    const linkedList = new LinkedList;
+    linkedList.insert('happy');
+    linkedList.insert('sad');
+    linkedList.insert('joyful');
+    linkedList.insertAfter('happy', 'angry');
+    expect(linkedList.toString()).toBe('joyful sad happy angry ');
   });
 
   it('Can properly remove a node from the beginning of the list', () => {
