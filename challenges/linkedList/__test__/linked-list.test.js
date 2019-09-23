@@ -51,4 +51,34 @@ describe('linked list', () => {
     expect(linkedList.toString()).toBe('joyful angry sad happy ');
   });
 
+  it('Can properly remove a node from the beginning of the list', () => {
+    const linkedList = new LinkedList;
+    linkedList.insert('happy');
+    linkedList.insert('sad');
+    linkedList.insert('angry');
+    linkedList.insert('joyful');
+    linkedList.deletes('happy');
+    expect(linkedList.includes('happy')).toBeFalsy();
+  });
+
+  it('Can properly remove a node from the end of the list', () => {
+    const linkedList = new LinkedList;
+    linkedList.insert('happy');
+    linkedList.insert('sad');
+    linkedList.insert('angry');
+    linkedList.insert('joyful');
+    linkedList.deletes('joyful');
+    expect(linkedList.includes('joyful')).toBeFalsy();
+  });
+
+  it('Can properly remove a node from the middle of the list', () => {
+    const linkedList = new LinkedList;
+    linkedList.insert('happy');
+    linkedList.insert('sad');
+    linkedList.insert('angry');
+    linkedList.insert('joyful');
+    linkedList.deletes('sad');
+    expect(linkedList.includes('sad')).toBeFalsy();
+  });
+
 });

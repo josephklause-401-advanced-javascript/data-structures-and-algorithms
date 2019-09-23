@@ -8,6 +8,9 @@ Define a method called insert
 Define a method called includes
 Define a method called toString
 
+## Stretch
+Write a method to delete a node with valuse
+
 ## Approach & Efficiency
 Create a Node Class
 with this.value equal to value passed in
