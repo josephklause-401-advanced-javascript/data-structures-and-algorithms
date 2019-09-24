@@ -5,10 +5,10 @@ class Node {
   }
 }
 
-
 class LinkedList {
   constructor() {
     this.head = null;
+    this.size = 0;
   }
 
   insert(value) {
@@ -16,6 +16,7 @@ class LinkedList {
     node.value = value;
     node.next = this.head;
     this.head = node;
+    this.size++;
     return this.head;
   }
 
@@ -30,6 +31,7 @@ class LinkedList {
       }
       formerLastNode.next = newLastNode;
     }
+    this.size++;
   }
 
 
@@ -39,6 +41,7 @@ class LinkedList {
     let node = this.head;
     if(node.value === value) {
       this.insert(newVal);
+      this.size++;
     }
 
     while(node.next) {
@@ -46,6 +49,7 @@ class LinkedList {
         newNode.next = node.next;
         node.next = newNode;
         node = newNode;
+        this.size++;
       } 
       node = node.next;
     } 
@@ -61,18 +65,21 @@ class LinkedList {
         newNode.next = node.next;
         node.next = newNode;
         node = newNode;
+        this.size++;
       } 
       node = node.next;
     }
         
     if(node.value === value && node.next === null) {
       this.append(newVal);
+      this.size++;
     }
   }
 
   deletes(value) {
     if(this.head.value === value) {
       this.head = this.head.next;
+      this.size--;
     } else {
       let previousNode = this.head;
       let currentNode = previousNode.next;
@@ -80,10 +87,12 @@ class LinkedList {
         if(currentNode.value === value) {
           previousNode.next = currentNode.next;
           currentNode = currentNode.next;
+          this.size--;
           break;
         } else {
           previousNode = currentNode;
           currentNode = currentNode.next;
+          this.size--;
         }
       }
     }
