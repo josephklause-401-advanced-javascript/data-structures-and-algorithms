@@ -8,3 +8,5 @@
 ### [Array Binary Search](challenges/arrayBinarySearch/array-binary-search.js)
 
 ### [Linked List](challenges/linkedList/linked-list.js)
+
+### [Linked List Insert](challenges/linkedList/linked-list.js)
