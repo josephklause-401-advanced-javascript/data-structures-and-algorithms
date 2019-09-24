@@ -37,11 +37,9 @@ class LinkedList {
 
   insertBefore(value, newVal) {
     const newNode = new Node(newVal);
-
     let node = this.head;
     if(node.value === value) {
       this.insert(newVal);
-      this.size++;
     }
 
     while(node.next) {
@@ -57,7 +55,6 @@ class LinkedList {
 
   insertAfter(value, newVal) {
     const newNode = new Node(newVal);
-
     let node = this.head;
 
     while(node.next) {
@@ -72,8 +69,25 @@ class LinkedList {
         
     if(node.value === value && node.next === null) {
       this.append(newVal);
-      this.size++;
     }
+  }
+
+  valueFromEnd(k) {
+    if(this.size <= k || k < 0) {
+      return 'exception';
+    }
+    let node = this.head;
+    for(k; k >= 0; k--){
+      if(k === 0) {
+        return node.value;
+      }
+      node = node.next;
+    }
+  }
+
+  valueFromMidPoint(){
+    const midPoint = Math.floor(this.size / 2);
+    return this.valueFromEnd(midPoint);
   }
 
   deletes(value) {
@@ -92,7 +106,6 @@ class LinkedList {
         } else {
           previousNode = currentNode;
           currentNode = currentNode.next;
-          this.size--;
         }
       }
     }
