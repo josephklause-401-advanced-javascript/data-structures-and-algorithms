@@ -1,7 +1,9 @@
 const { LinkedList } = require('../linkedList/linked-list');
 
 function mergeList(listOne, listTwo) {
+  
   const combinedList = new LinkedList;
+
   let listOneCount = listOne.size - 1;
   let listTwoCount = listTwo.size - 1;
 
