@@ -14,7 +14,7 @@ class Stack {
   push(value) {
     let node = new Node(value);
     node.value = value;
-    node.next = this.head;
+    node.next = this.top;
     this.top = node;
   }
 
