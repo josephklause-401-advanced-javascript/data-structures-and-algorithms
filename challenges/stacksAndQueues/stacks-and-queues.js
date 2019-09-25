@@ -38,10 +38,13 @@ class Queue {
   }
 
   enqueue(value) {
+    let currentNode = this.front;
+    while(currentNode.next) {
+      currentNode = currentNode.next;
+    }
     let node = new Node(value);
     node.value = value;
-    node.next = this.front;
-    this.front = node;
+    currentNode.next = node;
   }
 
   dequeue() {
