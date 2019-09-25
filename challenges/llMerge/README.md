@@ -2,16 +2,16 @@
 Eighth Code Challenge of Career track
 
 ## Challenge Description
-Write a method fro the Linked List Class which takes a number as a parameter and returns the node's value that is that far from the end of the list. 
-
-## Stretch
-Write a method that finds the node at the middle of the Linked List
+Write a function called mergeLists which takes two linked lists as arguments, zips the two linked lists together so that the nodes alternate between the two lists and returns a reference to the head of the zipped list.
 
 ## Approach & Efficiency
-Add a size of list (need to test).
-Compare k to length of list and confirm valid entry
-find difference, travel that many times down the list, return value.
+get a counter from each list based on list.size
+while loop through counter
+have  flag to change which list to work with
+get value from end based on counter
+insert value
+need options for if lists are of varying lengths
 
 
 ## Solution
-![LL-Kth-From-End Whiteboard](IMG_5273.jpg)
+![mergeLists Whiteboard](IMG_5275.jpg)
