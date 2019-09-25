@@ -1,5 +1,5 @@
 # Challenge Summary
-Seventh Code Challenge of Career track
+Eighth Code Challenge of Career track
 
 ## Challenge Description
 Write a method fro the Linked List Class which takes a number as a parameter and returns the node's value that is that far from the end of the list. 
