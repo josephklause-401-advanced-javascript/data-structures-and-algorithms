@@ -56,6 +56,18 @@ describe('stack', () => {
     expect(result).toBe('blue');
     expect(stack.top.next.next.value).toBe('orange');
   });
+});
 
+describe('queue', () => {
 
+  it('can enqueue into a queue', () => {
+    const queue = new Queue;
+    queue.enqueue('orange');
+    expect(queue.front.value).toBe('orange');
+  });
+
+  it('instantiates an empty queue', () => {
+    const emptyQueue = new Queue;
+    expect(emptyQueue.front).toBe(null);
+  });
 });
