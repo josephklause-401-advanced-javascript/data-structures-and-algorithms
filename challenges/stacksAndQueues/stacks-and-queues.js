@@ -13,7 +13,6 @@ class Stack {
 
   push(value) {
     let node = new Node(value);
-    node.value = value;
     node.next = this.top;
     this.top = node;
   }
@@ -39,13 +38,17 @@ class Queue {
 
   enqueue(value) {
     let node = new Node(value);
-    node.value = value;
-    
-    let currentNode = this.front;
-    while(currentNode.next) {
-      currentNode = currentNode.next;
+
+    if(!this.front) {
+      this.front = node;
+      return;
     }
-    currentNode.next = node;
+    let tailNode = this.front;
+
+    while(tailNode.next !== null) {
+      tailNode = tailNode.next;
+    }
+    tailNode.next = node;
   }
 
   dequeue() {

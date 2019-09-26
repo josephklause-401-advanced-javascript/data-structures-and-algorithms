@@ -63,9 +63,52 @@ describe('queue', () => {
   it('can enqueue into a queue', () => {
     const queue = new Queue;
     queue.enqueue('orange');
+    console.log(queue);
     expect(queue.front.value).toBe('orange');
   });
 
+  it('Can successfully enqueue multiple values into a queue', () => {
+    const queue = new Queue;
+    queue.enqueue('orange');
+    queue.enqueue('blue');
+    queue.enqueue('red');
+    expect(queue.front.value).toBe('orange');
+    expect(queue.front.next.value).toBe('blue');
+    expect(queue.front.next.next.value).toBe('red');
+  });
+
+  it('Can successfully dequeue out of a queue the expected value', () => {
+    const queue = new Queue;
+    queue.enqueue('orange');
+    queue.enqueue('blue');
+    queue.enqueue('red');
+    const result = queue.dequeue();
+    expect(result).toBe('orange');
+    expect(queue.front.value).toBe('blue');
+  });
+ 
+  it('Can successfully empty a queue after multiple dequeues', () => {
+    const queue = new Queue;
+    queue.enqueue('orange');
+    queue.enqueue('blue');
+    queue.enqueue('red');
+    const result1 = queue.dequeue();
+    const result2 = queue.dequeue();
+    const result3 = queue.dequeue();
+    expect(result1).toBe('orange');
+    expect(result2).toBe('blue');
+    expect(result3).toBe('red');
+  });
+
+  it('Can successfully peek into a queue, seeing the expected value', () => {
+    const queue = new Queue;
+    queue.enqueue('orange');
+    queue.enqueue('blue');
+    queue.enqueue('red');
+    const result = queue.peek();
+    expect(result).toBe('orange');
+  });
+  
   it('instantiates an empty queue', () => {
     const emptyQueue = new Queue;
     expect(emptyQueue.front).toBe(null);
