@@ -14,3 +14,9 @@
 ### [Linked List Kth From End](challenges/linkedList/linked-list.js)
 
 ### [Linked List Kth merge](challenges/linkedList/linked-list.js)
+
+### [llMerge](challenges/llMerge/ll-merge.js)
+
+### [stacksAndQueues](challenges/stacksAndQueues/stacks-and-queues.js)
+
+### [queueWithStacks](challenges/queueWithStacks/queue-with-stacks.js)
