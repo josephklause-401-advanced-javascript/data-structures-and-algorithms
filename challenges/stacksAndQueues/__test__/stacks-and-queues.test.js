@@ -63,7 +63,6 @@ describe('queue', () => {
   it('can enqueue into a queue', () => {
     const queue = new Queue;
     queue.enqueue('orange');
-    console.log(queue);
     expect(queue.front.value).toBe('orange');
   });
 

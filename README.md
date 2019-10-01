@@ -20,3 +20,5 @@
 ### [stacksAndQueues](challenges/stacksAndQueues/stacks-and-queues.js)
 
 ### [queueWithStacks](challenges/queueWithStacks/queue-with-stacks.js)
+
+### [fifoAnimalShelter](challenges/fifoAnimalShelter/fifo-animal-shelter.js)
