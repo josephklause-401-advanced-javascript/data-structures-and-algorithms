@@ -22,3 +22,5 @@
 ### [queueWithStacks](challenges/queueWithStacks/queue-with-stacks.js)
 
 ### [fifoAnimalShelter](challenges/fifoAnimalShelter/fifo-animal-shelter.js)
+
+### [multiBracketValidation](challenges/multiBracketValidation/multi-bracket-validation.js)
