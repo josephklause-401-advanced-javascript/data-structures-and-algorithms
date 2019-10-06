@@ -24,3 +24,7 @@
 ### [fifoAnimalShelter](challenges/fifoAnimalShelter/fifo-animal-shelter.js)
 
 ### [multiBracketValidation](challenges/multiBracketValidation/multi-bracket-validation.js)
+
+### [biggestElement](challenges/mock-interview-extra-credit/biggestElement/biggest-element.js)
+
+### [eenieMeenie](challenges/mock-interview-extra-credit/eenieMeenie/eenie-meenie.js)
