@@ -38,8 +38,7 @@ function multiBracketValidation(string) {
         break;
       case ')':
         closeParensCount++;
-        console.log('ding');
-        if(openParensCount === 0 && closeParensCount === 1) {
+        if((openParensCount === 0) && (closeParensCount === 1)) {
           return false;
         }
         break;
@@ -179,16 +178,18 @@ function multiBracketValidation(string) {
       }
 
     }
-
-    if((openParensCount !== closeParensCount) ||
+  }
+  if((openParensCount !== closeParensCount) ||
         (openCurlyCount !== closeCurlyCount) ||
         (openSquareCount !== closeSquareCount)) {
 
-      return false;
-    }
-
-    return true;
+    return false;
   }
+
+
+  
+  return true;
+
 }
 
 module.exports = multiBracketValidation;

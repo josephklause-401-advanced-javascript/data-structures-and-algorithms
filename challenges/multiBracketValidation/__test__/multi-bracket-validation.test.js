@@ -17,7 +17,7 @@ describe('multi bracket validation', ()=> {
     const inputOne = 'today [ is ] with []';
     const inputTwo = 'today { is } with {}';
     const inputThree = 'today ( is ) with ()';
-    const inputFour = 'today [ is ] and ( has { with ) and }';
+    const inputFour = 'today [ is ] and ( has { with } and )';
 
     expect(multiBracketValidation(inputOne)).toBe(true);
     expect(multiBracketValidation(inputTwo)).toBe(true);
@@ -26,14 +26,16 @@ describe('multi bracket validation', ()=> {
   });
   
   
-  it.only('will return false for a close bracket before an open bracket ', ()=> {
+  it('will return false for a close bracket before an open bracket ', ()=> {
     const inputOne = 'this ) will return false ( even with (this)';
-    // const inputTwo = 'this } will return false { even with {this}';
-    // const inputThree = 'this ] will return false [ even with [this]';
+    const inputTwo = 'this } will return false { even with {this}';
+    const inputThree = 'this ] will return false [ even with [this]';
+    const inputFour = 'this( will ) also ) return false ()';
 
     expect(multiBracketValidation(inputOne)).toBe(false);
-    // expect(multiBracketValidation(inputTwo)).toBe(false);
-    // expect(multiBracketValidation(inputThree)).toBe(false);
+    expect(multiBracketValidation(inputTwo)).toBe(false);
+    expect(multiBracketValidation(inputThree)).toBe(false);
+    expect(multiBracketValidation(inputFour)).toBe(false);
   });
   
   it('will return false for unequal balanced brackets', () => {
