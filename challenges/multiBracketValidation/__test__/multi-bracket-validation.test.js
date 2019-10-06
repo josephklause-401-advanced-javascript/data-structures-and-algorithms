@@ -46,7 +46,7 @@ describe('multi bracket validation', ()=> {
     const inputFive = '{this will return} false}';
     const inputSix = '(this will return)  false)';
     const inputSeven = '(this will [ also ] return false }';
-    const inputEight = '[this{ will () ] return} false ()'
+    const inputEight = '[this{ will () ] return} false ()';
 
     expect(multiBracketValidation(inputOne)).toBe(false);
     expect(multiBracketValidation(inputTwo)).toBe(false);
