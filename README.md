@@ -27,4 +27,6 @@
 
 ### [biggestElement](challenges/mock-interview-extra-credit/biggestElement/biggest-element.js)
 
-### [eenieMeenie](challenges/mock-interview-extra-credit/eenieMeenie/eenie-meenie.js)
+### [eenieMeenie](challenges/mock-interview-extra-credit/eeneyMeeney/eeney-meeney.js)
+
+### [tree](challenges/tree/tree.js)
