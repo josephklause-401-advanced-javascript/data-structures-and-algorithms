@@ -37,6 +37,7 @@ class Queue {
   }
 }
 
+
 function eeneyMeeneyMineyMo(arr, int) {
   const game = new Queue;
   arr.forEach(string => {
@@ -49,16 +50,18 @@ function eeneyMeeneyMineyMo(arr, int) {
       node.next = game.front;
       break;
     }
+    node = node.next;
   }
 
   node = game.front;
   while(node.value !== node.next.value) {
-    let counter = 1;
+    let counter = 2;
     while(counter < int) {
       node = node.next;
       counter ++;    
     } node.next = node.next.next;
+    node = node.next;
   } return node.value;
 } 
 
-exports.module = eeneyMeeneyMineyMo;
+module.exports = eeneyMeeneyMineyMo;

@@ -10,7 +10,7 @@ enqueue each string
 if node.next === null, node.next = game.front
 loop through while node.next !== node.value
 
-this method assumes each input is unique
+this method assumes each input is unique and a valid positive integer input
 
 
 ## Solution
