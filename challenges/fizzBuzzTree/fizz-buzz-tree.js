@@ -36,20 +36,6 @@ class BinarySearchTree {
     }
   }
 
-  inOrder() {
-    return inOrderHelper(this.root, []);
-  }
-
-  
-}
-
-function inOrderHelper(node, result) {
-  if(node) {
-    if(node.left) inOrderHelper(node.left, result);
-    result.push(node.value);
-    if(node.right) inOrderHelper(node.right, result);
-  }
-  return result;
 }
 
 
