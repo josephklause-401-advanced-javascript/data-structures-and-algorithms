@@ -1,6 +1,29 @@
 const BinarySearchTree = require('../tree');
 
 describe('binary tree', () => {
+
+  it('can successfully instantiate an empty tree', ()=> {
+    const binarySearchTree = new BinarySearchTree;
+    expect(binarySearchTree.root).toBe(null);
+  });
+
+  it('can successfully instantiate a tree with single root node', ()=> {
+    const binarySearchTree = new BinarySearchTree;
+    binarySearchTree.add(2);
+    expect(binarySearchTree.root.value).toBe(2);
+    expect(binarySearchTree.root.right).toBe(null);
+    expect(binarySearchTree.root.left).toBe(null);
+  });
+
+  it('can successfully instantiate a tree with single root and a left and right', ()=> {
+    const binarySearchTree = new BinarySearchTree;
+    binarySearchTree.add(2);
+    binarySearchTree.add(1);
+    binarySearchTree.add(3);
+    expect(binarySearchTree.root.value).toBe(2);
+    expect(binarySearchTree.root.right.value).toBe(3);
+    expect(binarySearchTree.root.left.value).toBe(1);
+  });
   
   it('traverses in preOrder', () => {
     const binarySearchTree = new BinarySearchTree;
