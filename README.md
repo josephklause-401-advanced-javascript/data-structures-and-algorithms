@@ -32,3 +32,5 @@
 ### [tree](challenges/tree/tree.js)
 
 ### [fizzBuzzTree](challenges/fizzBuzzTree/fizz-buzz-tree.js)
+
+### [breadthFirst](challenges/tree/tree.js)

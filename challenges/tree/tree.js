@@ -60,7 +60,22 @@ class BinarySearchTree {
     return postOrderHelper(this.root, []);
   }
   
+  breadthFirst() {
+    let node = this.root;
+    const queue = [node];
+    const result = [];
+    while(queue.length) {
+      node = queue.shift();
+      if(node.left) queue.push(node.left);
+      if(node.right) queue.push(node.right);
+      result.push(node.value);
+    }
+    return result;
+  }
+  
 }
+
+
 
 function preOrderHelper(node, result) {
   if(node) {
