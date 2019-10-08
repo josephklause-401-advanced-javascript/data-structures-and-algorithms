@@ -12,8 +12,12 @@ create a BinarySearchTree class
 
 
 ## Approach & Efficiency
+preOrder: parent than children
+inOrder: left children then parent, than right children
+postOrder: parent after children
 
+In order to check if those methods work, i need an add function, so I am just combining both classes into one!
 
 
 ## Solution
-![BinaryTree Whiteboard]()
+![BinaryTree Whiteboard](IMG_5292.jpg)
