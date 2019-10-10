@@ -1,4 +1,4 @@
-const multiBracketValidation = require('../multi-bracket-validation');
+const multiBracketValidation = require('../new-multi-bracket-validation');
 
 describe('multi bracket validation', ()=> {
 
