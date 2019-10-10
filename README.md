@@ -34,3 +34,5 @@
 ### [fizzBuzzTree](challenges/fizzBuzzTree/fizz-buzz-tree.js)
 
 ### [breadthFirst](challenges/tree/tree.js)
+
+### [getMaximumValue](challenges/tree/tree.js)

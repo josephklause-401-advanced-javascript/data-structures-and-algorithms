@@ -127,4 +127,38 @@ describe('binary tree', () => {
     expect(result).toEqual([6, 2, 7, 1, 4, 9, 3, 5, 8]);
   });
 
+  it('finds max value', () => {
+    const binarySearchTree = new BinarySearchTree;
+    binarySearchTree.add(6);
+    binarySearchTree.add(2);
+    binarySearchTree.add(7);
+    binarySearchTree.add(1);
+    binarySearchTree.add(12);
+    binarySearchTree.add(4);
+    binarySearchTree.add(3);
+    binarySearchTree.add(5);
+    binarySearchTree.add(9);
+    binarySearchTree.add(8);
+
+    const result = binarySearchTree.findMaximumValue();
+    expect(result).toEqual(12);
+  });
+
+  it('finds max value binary style', () => {
+    const binarySearchTree = new BinarySearchTree;
+    binarySearchTree.add(6);
+    binarySearchTree.add(2);
+    binarySearchTree.add(7);
+    binarySearchTree.add(1);
+    binarySearchTree.add(12);
+    binarySearchTree.add(4);
+    binarySearchTree.add(3);
+    binarySearchTree.add(5);
+    binarySearchTree.add(9);
+    binarySearchTree.add(8);
+
+    const result = binarySearchTree.findMaxValueBinaryStyle();
+    expect(result).toEqual(12);
+  });
+
 });
