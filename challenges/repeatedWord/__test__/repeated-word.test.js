@@ -1,4 +1,4 @@
-const { repeatedFirstWord, wordCount, mostFrequentWords } = require('../repeatedWord');
+const { repeatedFirstWord, wordCount, mostFrequentWords } = require('../repeated-word');
 
 describe('repeated word functions', () => {
 

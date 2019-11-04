@@ -24,3 +24,5 @@
 ### [fifoAnimalShelter](challenges/fifoAnimalShelter/fifo-animal-shelter.js)
 
 ### [multiBracketValidation](challenges/multiBracketValidation/multi-bracket-validation.js)
+
+### [repeatedWord](challenges/repeatedWord/repeated-word.js)
