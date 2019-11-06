@@ -36,3 +36,5 @@
 ### [breadthFirst](challenges/tree/tree.js)
 
 ### [getMaximumValue](challenges/tree/tree.js)
+
+### [repeatedWord](challenges/repeatedWord/repeated-word.js)
