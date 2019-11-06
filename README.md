@@ -32,3 +32,9 @@
 ### [tree](challenges/tree/tree.js)
 
 ### [treeIntersection](challenges/treeIntersection/tree-intersection.js)
+
+### [Insertion Sort](challenges/insertion-sort/insertSort.js)
+
+### [Merge Sort](challenges/merge-sort/mergeSort.js)
+
+### [Quick Sort](challenges/quick-sort/quickSort.js)
