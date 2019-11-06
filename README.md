@@ -30,3 +30,5 @@
 ### [eenieMeenie](challenges/mock-interview-extra-credit/eeneyMeeney/eeney-meeney.js)
 
 ### [tree](challenges/tree/tree.js)
+
+### [treeIntersection](challenges/treeIntersection/tree-intersection.js)
