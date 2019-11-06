@@ -1,20 +1,17 @@
 module.exports = (date, diff) => {
-  console.log(date);
+
 
   const diffNum = Number(diff.match(/[0-9]/gi));
   let diffLetter = diff.match(/([a-z, A-Z]|[^0-9, |])/gi)[0];
 
   const getSeconds = date.getSeconds();
   const getMinutes = date.getMinutes();
-  console.log(getMinutes);
-  const getHours = date.getHours();
-  console.log(getHours);
-  const getMonth = date.getMonth();
-  console.log(getMonth);
-  const getYear = 1900 + date.getYear();
-  console.log(getYear);
 
-  console.log(diffNum);
+  const getHours = date.getHours();
+\
+  const getMonth = date.getMonth();
+
+  const getYear = 1900 + date.getYear();
 
   const conversion = {
     s: date.setSeconds(getSeconds + diffNum),
