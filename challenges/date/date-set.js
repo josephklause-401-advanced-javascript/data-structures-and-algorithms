@@ -8,7 +8,7 @@ module.exports = (date, diff) => {
   const getMinutes = date.getMinutes();
 
   const getHours = date.getHours();
-\
+
   const getMonth = date.getMonth();
 
   const getYear = 1900 + date.getYear();
