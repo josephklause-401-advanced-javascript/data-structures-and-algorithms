@@ -31,13 +31,21 @@
 
 ### [tree](challenges/tree/tree.js)
 
+### [fizzBuzzTree](challenges/fizzBuzzTree/fizz-buzz-tree.js)
+
+### [breadthFirst](challenges/tree/tree.js)
+
+### [getMaximumValue](challenges/tree/tree.js)
+
+### [repeatedWord](challenges/repeatedWord/repeated-word.js)
+
 ### [oopsFile](challenges/oops-file/oops-file.js.js)
 
-### [tree](challenges/set/Set.js)
+### [Set](challenges/set/Set.js)
 
-### [tree](challenges/transactions/transaction.js)
+### [Transaction](challenges/transactions/transaction.js)
 
-### [tree](challenges/date/date-setting.js)
+### [Date Set](challenges/date/date-setting.js)
 
 ### [Insertion Sort](challenges/insertion-sort/insertSort.js)
 
@@ -48,3 +56,5 @@
 ### [hashTable](challenges/hash-table/hashTable.js)
 
 ### [treeIntersection](challenges/treeIntersection/tree-intersection.js)
+
+### [Left Join](challenges/left-join/leftJoin.js)
