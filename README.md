@@ -31,6 +31,16 @@
 
 ### [tree](challenges/tree/tree.js)
 
+### [treeIntersection](challenges/treeIntersection/tree-intersection.js)
+
+### [fizzBuzzTree](challenges/fizzBuzzTree/fizz-buzz-tree.js)
+
+### [breadthFirst](challenges/tree/tree.js)
+
+### [getMaximumValue](challenges/tree/tree.js)
+
+### [repeatedWord](challenges/repeatedWord/repeated-word.js)
+
 ### [oopsFile](challenges/oops-file/oops-file.js.js)
 
 ### [tree](challenges/set/Set.js)
@@ -47,4 +57,3 @@
 
 ### [hashTable](challenges/hash-table/hashTable.js)
 
-### [treeIntersection](challenges/treeIntersection/tree-intersection.js)

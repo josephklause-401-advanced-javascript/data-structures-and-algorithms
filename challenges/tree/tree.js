@@ -60,6 +60,54 @@ class BinarySearchTree {
     return postOrderHelper(this.root, []);
   }
   
+  breadthFirst() {
+    let node = this.root;
+    const queue = [node];
+    const result = [];
+    while(queue.length) {
+      node = queue.shift();
+      if(node.left) queue.push(node.left);
+      if(node.right) queue.push(node.right);
+      result.push(node.value);
+    }
+    return result;
+  }
+
+  findMaximumValue() {
+    return findMaxHelper(this.root);
+  }
+
+  findMaxValueBinaryStyle() {
+    return findMaxValueBinaryStyleHelper(this.root);
+  }
+}
+
+function findMaxValueBinaryStyleHelper(node) {
+  if(node.right === null) {
+    return node.value;
+  } 
+  if(node.right) return findMaxValueBinaryStyleHelper(node.right);
+}
+
+function findMaxHelper(node) {
+  let maxLeft;
+  let maxRight;
+  if(node.left) {
+    maxLeft = findMaxHelper(node.left);
+  } else {
+    maxLeft = node.value;
+  }
+  if(node.right) {
+    maxRight = findMaxHelper(node.right);
+  } else {
+    maxRight = node.value;
+  }
+  if(maxLeft > maxRight && maxLeft > node.value) {
+    return maxLeft;
+  } else if(maxRight > maxLeft && maxRight > node.value) {
+    return maxRight;
+  } 
+  return node.value;
 }
 
 function preOrderHelper(node, result) {
