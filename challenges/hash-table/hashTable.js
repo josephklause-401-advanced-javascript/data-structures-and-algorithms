@@ -6,7 +6,7 @@ const DEFAULT_HASH = size => key => key
 
 module.exports = class HashTable {
   constructor(buckets = 20, hashAlgorithm = DEFAULT_HASH) {
-    this.arr = new Array(buckets).fill([]);
+    this.arr = [...Array(buckets)].map(() => []);
     this.hashAlgorithm = hashAlgorithm(buckets);
   }
 
@@ -21,7 +21,7 @@ module.exports = class HashTable {
       for(let i = 0; i < bucket.length; i++) {
         if(bucket[i][0] === key){
           return bucket[i][1];
-        } return undefined;
+        } 
       } return undefined;
     }
   }
@@ -31,13 +31,15 @@ module.exports = class HashTable {
     for(let i = 0; i < bucket.length; i++) {
       if(bucket[i][0] === key){
         return true;
-      } return false;
+      }
     }
+    return false;
   }
 
   set(key, value) {
     const index = this.hash(key);
     const bucket = this.arr[index];
+
     for(let i = 0; i < bucket.length; i++) {
       if(bucket[i][0] === key){
         bucket[i][1] = value;
