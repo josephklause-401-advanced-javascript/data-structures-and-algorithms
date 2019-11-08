@@ -59,4 +59,4 @@
 
 ### [Left Join](challenges/left-join/leftJoin.js)
 
-### [Graph](challenges/graph/graph.js)
+### [Graph](challenges/graph/graph.js) 
