@@ -1,34 +1,33 @@
 class Node {
   constructor(value) {
     this.value = value;
-    this.adjcacents = [];
   }
 }
 
 class Graph {
   constructor() {
-    this.edges = {};
-    this.nodes = [];
-    this.size = 1;
+    this.adjList = new Map();
+    this.size = 0;
   }
   
   addNode(node) {
-    this.nodes.push(node);
-    this.edges[node] = [];
+    this.adjList.set(node.value, []);
     this.size++;
   }
 
   addEdge(node1, node2, weight = 1) {
-    this.edges[node1].push({ node: node2, weight: weight });
-    this.edges[node2].push({ node: node1, weight: weight });
+    if(!node2) return;
+    this.adjList.get(node1.value).push({ node: node2.value, weight: weight });
+    this.adjList.get(node2.value).push({ node: node1.value, weight: weight });
   }
 
   getNodes() {
-    return this.nodes;
+    if(this.size === 0) return null;
+    return Array.from(this.adjList.keys());
   }
 
   getNeighbors(node) {
-    return this.edges[node];
+    return this.adjList.get(node.value);
   }
 }
 
