@@ -19,7 +19,7 @@ describe('breadth first traversal of graph class', ()=> {
     graph.addEdge(node3, node5);
     graph.addEdge(node2, node5);
     graph.addEdge(node1, node5);
-    expect(graph.breadthFirst(node1)).toEqual();
+    expect(graph.breadthFirst(node1)).toEqual(['A', 'B', 'E', 'C', 'D']);
   });
 
 });

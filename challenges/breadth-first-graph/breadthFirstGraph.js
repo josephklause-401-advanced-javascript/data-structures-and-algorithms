@@ -13,15 +13,15 @@ class Graph {
   }
   
   addNode(node) {
-    this.adjList.set(node.value, []);
+    this.adjList.set(node, []);
     this.size++;
   }
 
   addEdge(node1, node2, weight = 1) {
-    if(!node2) this.adjList.get(node1.value).push({ node: node1.value, weight: weight });
+    if(!node2) this.adjList.get(node1).push({ node: node1, weight: weight });
     else {
-      this.adjList.get(node1.value).push({ node: node2.value, weight: weight });
-      this.adjList.get(node2.value).push({ node: node1.value, weight: weight });
+      this.adjList.get(node1).push({ node: node2, weight: weight });
+      this.adjList.get(node2).push({ node: node1, weight: weight });
     }
   }
 
@@ -30,7 +30,7 @@ class Graph {
   }
 
   getNeighbors(node) {
-    return this.adjList.get(node.value);
+    return this.adjList.get(node);
   }
 
   getGraph() {
@@ -41,15 +41,17 @@ class Graph {
   breadthFirst(first) {
     const visited = new Map();
     const visitList = new Queue();
+    
     const result = [];
     visitList.enqueue(first);
-
-    while(visitList.front === null) {
+    while(visitList.front !== null) {
       const node = visitList.dequeue();
       if(node && !visited.has(node)) {
-        result.push(node);
+        result.push(node.value);
         visited.set(node);
-        node.getNeighbors().forEach(neighbor => visitList.add(neighbor));
+        if(this.getNeighbors(node)){
+          this.getNeighbors(node).forEach(neighbor => visitList.enqueue(neighbor.node));
+        }
       }
     }
     return result;
