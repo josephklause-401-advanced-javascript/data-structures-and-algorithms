@@ -112,4 +112,26 @@ describe('queue', () => {
     const emptyQueue = new Queue;
     expect(emptyQueue.front).toBe(null);
   });
+
+  it('has returns false if empty Queue', () => {
+    const emptyQueue = new Queue;
+    expect(emptyQueue.has('black')).toBe(false);
+  });
+
+  it('has returns false if value is not in Queue', () => {
+    const queue = new Queue;
+    queue.enqueue('orange');
+    queue.enqueue('blue');
+    queue.enqueue('red');
+    expect(queue.has('black')).toBe(false);
+  });
+
+  it('has returns true if value is in Queue', () => {
+    const queue = new Queue;
+    queue.enqueue('orange');
+    queue.enqueue('blue');
+    queue.enqueue('red');
+    expect(queue.has('red')).toBe(true);
+  });
+
 });

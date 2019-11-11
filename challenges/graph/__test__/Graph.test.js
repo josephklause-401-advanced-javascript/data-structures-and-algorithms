@@ -50,7 +50,7 @@ describe('graph class', ()=> {
     const node1 = new Node('A');
     graph.addNode(node1);
     graph.addEdge(node1);
-    expect(graph.getGraph()).toEqual([['A', [{'node': 'A', 'weight': 1}]]]);
+    expect(graph.getGraph()).toEqual([['A', [{ 'node': 'A', 'weight': 1 }]]]);
   });
   it('An empty graph properly returns null', ()=> {
     const graph = new Graph();

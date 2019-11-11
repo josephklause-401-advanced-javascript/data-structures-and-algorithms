@@ -41,7 +41,7 @@ class Graph {
   breadthFirst(first) {
     const visited = new Map();
     const visitList = new Queue();
-    
+
     const result = [];
     visitList.enqueue(first);
     while(visitList.front !== null) {

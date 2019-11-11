@@ -63,17 +63,17 @@ class Queue {
   }
 
   has(value) {
-
     if(!this.front) {
       return false;
     }
 
     let node = this.front;
-
+   
     while(node.next !== null) {
-      if(value === node.value) return true;
+      if(node.value === value) return true;
       node = node.next;
     }
+    if(node.value === value) return true;
     return false;
   }
 }
