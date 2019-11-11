@@ -60,3 +60,6 @@
 ### [Left Join](challenges/left-join/leftJoin.js)
 
 ### [Graph](challenges/graph/graph.js) 
+
+### [BreadthFirstGraph](challenges/breadth-first-graph/breadthFirstGraph.js) 
+

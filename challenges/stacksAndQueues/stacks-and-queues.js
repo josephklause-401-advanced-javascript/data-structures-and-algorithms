@@ -61,6 +61,10 @@ class Queue {
     let node = this.front;
     return node.value;
   }
+
+  has() {
+    
+  }
 }
 
 module.exports = {
