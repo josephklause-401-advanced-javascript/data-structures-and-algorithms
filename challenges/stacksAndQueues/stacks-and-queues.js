@@ -61,6 +61,21 @@ class Queue {
     let node = this.front;
     return node.value;
   }
+
+  has(value) {
+    if(!this.front) {
+      return false;
+    }
+
+    let node = this.front;
+   
+    while(node.next !== null) {
+      if(node.value === value) return true;
+      node = node.next;
+    }
+    if(node.value === value) return true;
+    return false;
+  }
 }
 
 module.exports = {

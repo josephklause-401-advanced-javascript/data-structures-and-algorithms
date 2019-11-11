@@ -31,8 +31,6 @@
 
 ### [tree](challenges/tree/tree.js)
 
-### [treeIntersection](challenges/treeIntersection/tree-intersection.js)
-
 ### [fizzBuzzTree](challenges/fizzBuzzTree/fizz-buzz-tree.js)
 
 ### [breadthFirst](challenges/tree/tree.js)
@@ -43,11 +41,11 @@
 
 ### [oopsFile](challenges/oops-file/oops-file.js.js)
 
-### [tree](challenges/set/Set.js)
+### [Set](challenges/set/Set.js)
 
-### [tree](challenges/transactions/transaction.js)
+### [Transaction](challenges/transactions/transaction.js)
 
-### [tree](challenges/date/date-setting.js)
+### [Date Set](challenges/date/date-setting.js)
 
 ### [Insertion Sort](challenges/insertion-sort/insertSort.js)
 
@@ -56,4 +54,12 @@
 ### [Quick Sort](challenges/quick-sort/quickSort.js)
 
 ### [hashTable](challenges/hash-table/hashTable.js)
+
+### [treeIntersection](challenges/treeIntersection/tree-intersection.js)
+
+### [Left Join](challenges/left-join/leftJoin.js)
+
+### [Graph](challenges/graph/graph.js) 
+
+### [BreadthFirstGraph](challenges/breadth-first-graph/breadthFirstGraph.js) 
 
