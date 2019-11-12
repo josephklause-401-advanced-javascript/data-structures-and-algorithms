@@ -56,10 +56,6 @@ class Graph {
     }
     return result;
   }
-
-  breadthFirstConnection() {
-
-  }
 }
 
 module.exports = {

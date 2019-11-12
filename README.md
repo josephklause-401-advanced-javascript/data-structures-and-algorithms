@@ -63,3 +63,5 @@
 
 ### [BreadthFirstGraph](challenges/breadth-first-graph/breadthFirstGraph.js) 
 
+### [GetEdges](challenges/get-edges/getEdges.js) 
+
