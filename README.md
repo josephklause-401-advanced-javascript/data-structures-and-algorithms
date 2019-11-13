@@ -65,3 +65,5 @@
 
 ### [GetEdges](challenges/get-edges/getEdges.js) 
 
+### [DepthFirstGraph](challenges/depth-first-graph/depthFirst.js) 
+
